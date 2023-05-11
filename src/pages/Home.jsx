@@ -17,9 +17,6 @@ function HomePage() {
                     </svg>
                 </div>
                 <div className="navbar-main" style={{height: navbaractive ? '125px' : '0' }}>
-                    {/* <span><a>About</a></span>
-                    <span><a>Projects</a></span>
-                    <span><a>Education</a></span> */}
                     <a href='#aboutme'>About</a>
                     <a href='#projects'>Projects</a>
                     <a href='#education'>Education</a>
@@ -43,7 +40,7 @@ function HomePage() {
                         Undergrad Math Student at IIT Hyderabad. An ardent Fan of Technology.
                     </div>
                     <div className="buttons-wrap">
-                        <button className="rounded_button" onClick={() => { window.open('/Resume.pdf') }}>Resume</button>
+                        <button className="rounded_button" onClick={() => { window.open('adhitht.github.io/Resume.pdf') }}>Resume</button>
                         <button className="rounded_button" onClick={() => { window.open('mailto:adhith@duck.com?subject=I would like to work with you') }}>Hire Me!</button>
                     </div>
                     <div className="socials">
