@@ -1,0 +1,297 @@
+:root {
+  --primary: #393E46;
+  --secondary: #FFD400;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--primary);
+  overflow-x: hidden;
+}
+
+.nav-hamburger {
+  width: 90%;
+  margin: 0;
+  padding: 2% 5%;
+  background-color: rgba(57, 62, 70, 1);
+  position: relative;
+  z-index: 10;
+  display: none;
+  justify-content: flex-end;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  gap: 10%;
+  background-color: rgba(57, 62, 70, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.navbar-main {
+  margin: 2% 0 0 5%;
+  /* padding: 20px; */
+  /* height: auto; */
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  width: 90%;
+  justify-content: flex-end;
+  transition: all 0.5s cubic-bezier(0.66,-0.47, 0.31, 0.99);
+  /* backdrop-filter: blur(5px); */
+
+}
+
+.navbar a {
+  display: flex;
+  margin: 0 0 7px 0;
+  flex-direction: column;
+  color: white;
+  font-size: 30px;
+}
+
+.navbar a::after {
+  content: '';
+  width: 0;
+  transition: all 0.2s cubic-bezier(0.82, 0.01, 0.47, 1);
+}
+
+.navbar a:hover::after {
+  border: 1px solid white;
+  width: 100%;
+}
+
+.navbar a:not(:hover)::after {
+  border: 1px solid white;
+  width: 0%;
+}
+
+
+
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.image-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.image {
+  margin-right: 10%;
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.main-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myname {
+  font-size: 50px;
+  color: white;
+}
+
+.namebar {
+  width: 70%;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.small-desc {
+  font-size: 24px;
+  color: white;
+  width: 70%;
+  text-indent: 50px;
+  margin: 30px 0;
+}
+
+.buttons-wrap {
+  display: flex;
+  gap: 4%;
+  margin: 4% 0;
+}
+
+.rounded_button {
+  background-color: var(--secondary);
+  outline: none;
+  border-radius: 40px;
+  height: 60px;
+  padding: 0 30px;
+  font-size: 30px;
+  border: 0;
+}
+
+.rounded_button:hover{
+  cursor: pointer;
+}
+
+.socials {
+  margin: 0 0 50px 10px;
+  display: flex;
+  gap: 50px;
+}
+
+.socials svg:hover{
+  cursor: pointer;
+}
+
+.aboutme-content {
+  display: flex;
+}
+
+.heading {
+  color: white;
+  font-size: 50px;
+  margin: 3%;
+}
+
+.aboutme-textcontent {
+  text-indent: 75px;
+  color: white;
+  margin: 2%;
+  font-size: 30px;
+}
+
+.aboutme-image {
+  height: 400px;
+}
+
+.projects-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 75px;
+}
+
+.education {
+  margin: 50px 0;
+}
+
+.education-list {
+  margin: 0 150px;
+}
+
+.footer {
+  margin: 10px;
+}
+
+.footer p {
+  margin: auto;
+  padding: 5px 25px;
+  border-radius: 50px;
+  font-size: 22px;
+  width: max-content;
+  background-color: #EEEEEE;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* .navbar{
+    height: 160px;
+  } */
+
+  .navbar a {
+    font-size: 26px;
+  }
+
+  .navbar a::after {
+    content: none;
+  }
+
+  .navbar-main {
+    margin: 0 0 0 5%;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-wrap {
+    justify-content: center;
+  }
+
+  .image {
+    margin: 0;
+    width: 30%;
+  }
+
+  .main-details {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .buttons-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutme-textcontent {
+    margin: 0 20px;
+    font-size: 25px;
+  }
+
+  .aboutme-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-wrap {
+    gap: 22px;
+  }
+
+  .rounded_button {
+    height: 50px;
+    font-size: 25px;
+  }
+
+  .aboutme-image {
+    display: none;
+  }
+
+  .small-desc {
+    text-indent: 0;
+    width: 100%;
+  }
+
+  .socials {
+    margin: 10px 0 50px 10px;
+
+  }
+
+  .image {
+    width: 55%;
+  }
+
+  .education-list {
+    margin: 0 25px;
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar-main{
+    height: auto !important;
+  }
+}

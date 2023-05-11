@@ -1,0 +1,25 @@
+.project-wrap{
+    border-radius: 20px;
+    background-color: #EEEEEE;
+    width: min(calc(90% - 40px), 320px);
+    padding: 20px;
+}
+
+.project-name{
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.project-name:hover{
+    cursor: pointer;
+}
+
+.project-desc{
+    font-size: 20px;
+    text-indent: 40px;
+}
+
+.project-image{
+    width: 100%;
+    border-radius: 20px;
+}
